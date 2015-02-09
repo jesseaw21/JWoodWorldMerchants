@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WorldMerchants.Models.MerchantView>
+
+@{
+    ViewBag.Title = "Merchants";
+}
+
+<h2>Merchants</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Merchant Name
+        </th>
+        <th>
+            Whereabouts
+        </th>
+        <th>
+            Product Type
+        </th>
+        <th>
+            Items
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Items)
+            </td>
+        </tr>
+    }
+
+</table>
+
