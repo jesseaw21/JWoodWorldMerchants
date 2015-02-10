@@ -16,28 +16,34 @@ namespace WorldMerchants.Controllers
             WorldContext db = new WorldContext();
 
             var merchants = db.Merchants.Include("Items"); // Grab Merchants from database
-            var items = db.Items;  // Grab Items from database
-
+            var items = (from i in db.Items
+                         where i.MerchantID == 1
+                         select i);
+            
             List<MerchantView> merchList = new List<MerchantView>();
             List<ItemView> itemViewList = new List<ItemView>();
 
             // This loop will grab name property from Items in itemList and add new items with that name
             // property to the List of ItemViews, so that the Items property of merchList can use this list
-            foreach (Item i in items)  
+            foreach (Item i in items)
             {
                 itemViewList.Add(new ItemView() { Name = i.Name });
             }
-            
+
             foreach (Merchant m in db.Merchants)
-            {            
-                merchList.Add(new MerchantView()
+            {
+                if (m.ID == 1)
                 {
-                    Name = m.Name,
-                    Location = m.Location,
-                    Type = m.Type,
-                    Items = itemViewList
-                });                
+                    merchList.Add(new MerchantView()
+                            {
+                                Name = m.Name,
+                                Location = m.Location,
+                                Type = m.Type,
+                                Items = itemViewList
+                            });
+                }
             }
+
             return View(merchList);
         }
     }

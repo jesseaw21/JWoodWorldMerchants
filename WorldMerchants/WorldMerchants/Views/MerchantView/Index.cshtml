@@ -35,7 +35,11 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Items)
+                @foreach (var i in item.Items)
+                {
+                    @Html.DisplayFor(modelItem => i.Name)
+                    <br />
+                }
             </td>
         </tr>
     }

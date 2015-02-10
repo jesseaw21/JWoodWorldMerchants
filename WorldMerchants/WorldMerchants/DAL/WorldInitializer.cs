@@ -8,8 +8,8 @@ using WorldMerchants.Models;
 
 namespace WorldMerchants.DAL
 {
-    public class WorldInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<WorldContext>
-    //public class WorldInitializer : System.Data.Entity.DropCreateDatabaseAlways<WorldContext>
+    //public class WorldInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<WorldContext>
+    public class WorldInitializer : System.Data.Entity.DropCreateDatabaseAlways<WorldContext>
     {
         protected override void Seed(WorldContext context)
         {
@@ -24,8 +24,8 @@ namespace WorldMerchants.DAL
 
             var items = new List<Item>
             {
-                new Item{Name="Wood Mallet", Rarity="Rare", Type="Mallet", Value=13, Points=6, Magic=2},
-                new Item{Name="Ruby", Rarity="Uncommon", Type="Gem", Value=15, Points=7, Magic=3}
+                new Item{Name="Wood Mallet", Rarity="Rare", Type="Mallet", Value=13, Points=6, Magic=2, MerchantID=1},
+                new Item{Name="Ruby", Rarity="Uncommon", Type="Gem", Value=15, Points=7, Magic=3, MerchantID=1}
             };
 
             items.ForEach(s => context.Items.Add(s));
@@ -37,6 +37,14 @@ namespace WorldMerchants.DAL
             };
 
             players.ForEach(p => context.Players.Add(p));
+            context.SaveChanges();
+
+            var pictures = new List<Picture>
+            {
+                new Picture{PictureURL = "This"}
+            };
+
+            pictures.ForEach(pc => context.Pictures.Add(pc));
             context.SaveChanges();
         }
     }
