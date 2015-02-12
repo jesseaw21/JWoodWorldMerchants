@@ -18,7 +18,7 @@
             Product Type
         </th>
         <th>
-            Items
+            Number of Items
         </th>
     </tr>
 
@@ -35,14 +35,11 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                @foreach (var i in item.Items)
-                {
-                    @Html.DisplayFor(modelItem => i.Name)
-                    <br />
-                }
+                 @Html.DisplayFor(modelItem => item.ItemCount.itemCount)
             </td>
         </tr>
     }
 
 </table>
+@Html.ActionLink("The Items", "WorldItems", "MerchantView")
 

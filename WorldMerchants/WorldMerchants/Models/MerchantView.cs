@@ -10,11 +10,11 @@ namespace WorldMerchants.Models
         public string Name { get; set; }
         public string Location { get; set; }
         public string Type { get; set; }
-        public List<ItemView> Items { get; set; }
+        public ItemCount ItemCount { get; set; }
     }
 
-    public class ItemView
+    public class ItemCount
     {
-        public string Name { get; set; }
+        public int itemCount { get; set; }
     }
 }

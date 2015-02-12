@@ -20,8 +20,7 @@ namespace WorldMerchants.Controllers
         {
             WorldContext db = new WorldContext();
 
-            var players = (from p in db.Players
-                           select p).FirstOrDefault();
+            var players = db.Players;
 
             return View(players);
         }

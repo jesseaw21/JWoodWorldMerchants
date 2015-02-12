@@ -1,4 +1,4 @@
-﻿@model WorldMerchants.Models.Player
+﻿@model IEnumerable<WorldMerchants.Models.Player>
 
 @{
     ViewBag.Title = "Players";
@@ -6,20 +6,10 @@
 
 <h2>Players</h2> <br />
 
-<table class="table">
-    <tr>
-        <th>
-            Name
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Score)
-        </th>
-        <th></th>
-    </tr>
-
-    <tr>
-        <td>@Model.Name</td>
-    </tr>
- 
-
-    </table>
+    <div>
+        @foreach (var player in Model)
+    {
+            @Html.DisplayFor(modelItem => player.Name)
+            <br />
+    }
+    </div>
