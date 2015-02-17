@@ -13,7 +13,6 @@ namespace WorldMerchants.Models
             public string Type { get; set; }
             public int Value { get; set; }
             public int Points { get; set; }
-            public int Magic { get; set; }
             public Merchant Merchant { get; set; }
     }
 }

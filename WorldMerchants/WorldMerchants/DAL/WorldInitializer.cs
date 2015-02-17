@@ -26,14 +26,14 @@ namespace WorldMerchants.DAL
 
             var items = new List<Item>
             {
-                new Item{Name="Wood Mallet", Rarity="Rare", Type="Weapon", Value=13, Points=6, Magic=2, MerchantID=1},
-                new Item{Name="Ruby", Rarity="Uncommon", Type="Gem", Value=15, Points=7, Magic=3, MerchantID=2},
-                new Item{Name="Bow", Rarity="Common", Type="Weapon", Value=13, Points=6, Magic=2, MerchantID=1},
-                new Item{Name="Emerald", Rarity="Common", Type="Gem", Value=15, Points=7, Magic=3, MerchantID=2},
-                new Item{Name="Peridot", Rarity="Rare", Type="Gem", Value=13, Points=6, Magic=2, MerchantID=2},
-                new Item{Name="Sword", Rarity="Uncommon", Type="Weapon", Value=15, Points=7, Magic=3, MerchantID=4},
-                new Item{Name="Shank", Rarity="Rare", Type="Weapon", Value=13, Points=6, Magic=2, MerchantID=4},
-                new Item{Name="Mace", Rarity="Uncommon", Type="Weapon", Value=15, Points=7, Magic=3, MerchantID=4},
+                new Item{Name="Wood Mallet", Rarity="Rare", Type="Weapon", Value=13, Points=6, MerchantID=1},
+                new Item{Name="Ruby", Rarity="Uncommon", Type="Gem", Value=15, Points=7, MerchantID=2},
+                new Item{Name="Bow", Rarity="Common", Type="Weapon", Value=13, Points=6, MerchantID=1},
+                new Item{Name="Emerald", Rarity="Common", Type="Gem", Value=15, Points=7, MerchantID=2},
+                new Item{Name="Peridot", Rarity="Rare", Type="Gem", Value=13, Points=6, MerchantID=2},
+                new Item{Name="Sword", Rarity="Uncommon", Type="Weapon", Value=15, Points=7, MerchantID=4},
+                new Item{Name="Shank", Rarity="Rare", Type="Weapon", Value=13, Points=6, MerchantID=4},
+                new Item{Name="Mace", Rarity="Uncommon", Type="Weapon", Value=15, Points=7, MerchantID=4},
             };
 
             items.ForEach(s => context.Items.Add(s));

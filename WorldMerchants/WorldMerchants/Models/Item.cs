@@ -22,10 +22,5 @@ namespace WorldMerchants.Models
         public string Type { get; set; }
         public int Value { get; set; }
         public int Points { get; set; }
-        public int Magic { get; set; }
-
-        //public virtual Merchant Merchant { get; set; }
-        //public virtual Player Player { get; set; }
-        //public virtual Picture Picture { get; set; }
     }
 }

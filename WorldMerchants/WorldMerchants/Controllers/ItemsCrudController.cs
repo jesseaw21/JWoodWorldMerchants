@@ -58,7 +58,6 @@ namespace WorldMerchants.Controllers
                     Type = itemCvm.Type,
                     Value = itemCvm.Value,
                     Points = itemCvm.Points,
-                    Magic = itemCvm.Magic,
                 };
                 var merchant = (from m in db.Merchants
                                 where m.Name == itemCvm.Merchant.Name
