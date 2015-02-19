@@ -1,7 +1,7 @@
 ﻿@model WorldMerchants.Models.ItemCreateViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create an Item";
 }
 
 <h2>Create an Item</h2>
@@ -11,8 +11,7 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Item</h4>
+    <div class="form-horizontal">        
         <hr />
         
 
@@ -74,8 +73,27 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <h4>@Html.ActionLink("View Current Items", "Index", "ItemsCrud")</h4><br />
+    </div>
+    <table>
+    <tr>
+        <th>
+            View Items by Mechant:
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("Overwood", "Details/1", "Merchants")
+        </th>
+        <th>
+            &nbsp;&nbsp; @Html.ActionLink("Underhill", "Details/2", "Merchants")
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("The Mountain", "Details/3", "Merchants")
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("Metalworks", "Details/4", "Merchants")
+        </th>
+    </tr>
+</table>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
