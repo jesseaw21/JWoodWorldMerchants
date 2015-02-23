@@ -39,6 +39,14 @@ namespace WorldMerchants.Controllers
         // GET: ItemsCrud/Create
         public ActionResult Create()
         {
+            var merchants = new List<string>();
+            var merchQuery = from m in db.Merchants
+                             orderby m.Name
+                             select m.Name;
+
+            merchants.AddRange(merchQuery);
+            ViewBag.MerchantList = new SelectList(merchants);
+
             return View();
         }
 
@@ -47,7 +55,7 @@ namespace WorldMerchants.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Rarity,Type,Value,Points,Magic, Merchant")] ItemCreateViewModel itemCvm)
+        public ActionResult Create([Bind(Include = "Name,Rarity,Type,Value,Points")] ItemCreateViewModel itemCvm, string aMerchant)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +68,7 @@ namespace WorldMerchants.Controllers
                     Points = itemCvm.Points,
                 };
                 var merchant = (from m in db.Merchants
-                                where m.Name == itemCvm.Merchant.Name
+                                where m.Name == aMerchant
                                 select m).FirstOrDefault<Merchant>();
                 item.MerchantID = merchant.ID;
 

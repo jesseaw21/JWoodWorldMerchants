@@ -218,3 +218,5 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldMerchants\WorldMerchant
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldMerchants\WorldMerchants\obj\Debug\WorldMerchants.csprojResolveAssemblyReference.cache
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldMerchants\WorldMerchants\obj\Debug\WorldMerchants.dll
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldMerchants\WorldMerchants\obj\Debug\WorldMerchants.pdb
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldMerchants\WorldMerchants\obj\Debug\WorldMerchants.Migrations.InitialCreate.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldMerchants\WorldMerchants\obj\Debug\WorldMerchants.csproj.GenerateResource.Cache

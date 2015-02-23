@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="WorldContext-Web.config Connection String" description="WorldContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDBFilename=|DataDirectory|\WorldMerchants2.mdf;Initial Catalog=WorldMerchants2;Integrated Security=SSPI;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WorldContext']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="WorldContext_DatabasePublish-Web.config Connection String" description="WorldContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="WorldContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WorldContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>
