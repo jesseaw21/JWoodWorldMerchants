@@ -25,8 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Rarity, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Rarity, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Rarity, "", new { @class = "text-danger" })
+                @Html.DropDownList("rareness", (IEnumerable<SelectListItem>)ViewBag.RarityList, "Select Rarity")
             </div>
         </div>
 
@@ -57,7 +56,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Merchant.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("aMerchant", (IEnumerable<SelectListItem>)ViewBag.MerchantList, "<merchant name>")
+                @Html.DropDownList("aMerchant", (IEnumerable<SelectListItem>)ViewBag.MerchantList, "Select Merchant")
             </div>
         </div>
 

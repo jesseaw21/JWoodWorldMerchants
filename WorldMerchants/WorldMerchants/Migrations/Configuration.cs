@@ -24,7 +24,7 @@ namespace WorldMerchants.Migrations
                 new Merchant{Name="Metalworks",Location="The Docks",Type="Forged Steel"}
             };
 
-            merchants.ForEach(m => context.Merchants.Add(m));
+            merchants.ForEach(m => context.Merchants.AddOrUpdate(m));
             context.SaveChanges();
 
             var items = new List<Item>
@@ -41,7 +41,7 @@ namespace WorldMerchants.Migrations
                 new Item{Name="Malachite", Rarity="Uncommon", Type="Mineral", Value=8, Points=3, MerchantID=merchants.Single(m => m.Name == "The Mountain").ID},
             };
 
-            items.ForEach(s => context.Items.Add(s));
+            items.ForEach(s => context.Items.AddOrUpdate(s));
             context.SaveChanges();
 
             var players = new List<Player>
@@ -51,7 +51,7 @@ namespace WorldMerchants.Migrations
                 new Player{Name="Henry", DateStarted=DateTime.Now, Score=5}
             };
 
-            players.ForEach(p => context.Players.Add(p));
+            players.ForEach(p => context.Players.AddOrUpdate(p));
             context.SaveChanges();
 
             var pictures = new List<Picture>
@@ -59,7 +59,7 @@ namespace WorldMerchants.Migrations
                 new Picture{PictureURL = "This"}
             };
 
-            pictures.ForEach(pc => context.Pictures.Add(pc));
+            pictures.ForEach(pc => context.Pictures.AddOrUpdate(pc));
             context.SaveChanges();
         }
     }

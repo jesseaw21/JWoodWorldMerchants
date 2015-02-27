@@ -20,7 +20,6 @@ namespace WorldMerchants.Models
 
         [StringLength(35)]
         public string Name { get; set; }
-        [Required]
         public string Rarity { get; set; }
         [Required]
         public string Type { get; set; }

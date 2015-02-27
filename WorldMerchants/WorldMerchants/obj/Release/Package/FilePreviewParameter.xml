@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="WorldOfMerchants" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:dons9b7sdp.database.windows.net,1433;Initial Catalog=WorldOfAdeDekTTm;User Id=iehfloj2k7@dons9b7sdp;Password=accordF22$" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="WorldContext-Web.config Connection String" description="" value="Data Source=tcp:dons9b7sdp.database.windows.net,1433;Initial Catalog=WorldOfAdeDekTTm;User Id=iehfloj2k7@dons9b7sdp;Password=accordF22$" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jesse\\Documents\\GitHub\\JWoodWorldMerchants\\WorldMerchants\\WorldMerchants\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WorldContext']/@connectionString" />
+  </parameter>
+</parameters>
