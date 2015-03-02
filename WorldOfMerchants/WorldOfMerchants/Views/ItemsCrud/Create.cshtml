@@ -1,0 +1,96 @@
+﻿@model WorldOfMerchants.Models.ItemCreateViewModel
+
+@{
+    ViewBag.Title = "Create an Item";
+}
+
+<h2>Create an Item</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Rarity, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("rareness", (IEnumerable<SelectListItem>)ViewBag.RarityList, "Select Rarity")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Value, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Value, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Points, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Points, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Points, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Merchant.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("aMerchant", (IEnumerable<SelectListItem>)ViewBag.MerchantList, "Select Merchant")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <h4>@Html.ActionLink("View Current Items", "Index", "ItemsCrud")</h4><br />
+</div>
+<table>
+    <tr>
+        <th>
+            View Items by Mechant:
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("Overwood", "ItemsByMerchant/1", "ItemsCrud")
+        </th>
+        <th>
+            &nbsp;&nbsp; @Html.ActionLink("Underhill", "ItemsByMerchant/2", "ItemsCrud")
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("The Mountain", "ItemsByMerchant/3", "ItemsCrud")
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("Metalworks", "ItemsByMerchant/4", "ItemsCrud")
+        </th>
+    </tr>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

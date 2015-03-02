@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WorldOfMerchants.Models.Item>
+
+@{
+    ViewBag.Title = "Items in the World";
+}
+
+<h3>@ViewBag.Header</h3><br />
+
+<p>Number of items currently in the world: @ViewBag.NumItems</p>
+
+<hr />
+
+<div>
+    @foreach (var item in Model)
+    {
+        @Html.DisplayFor(modelItem => item.Name) <br />
+    }
+</div>
+<br />
+<b>@Html.ActionLink("Back to List", "Index", "MerchantsCrud")</b>
