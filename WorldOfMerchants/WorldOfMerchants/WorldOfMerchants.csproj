@@ -118,6 +118,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemBuyController.cs" />
     <Compile Include="Controllers\ItemsCrudController.cs" />
     <Compile Include="Controllers\MerchantsCrudController.cs" />
     <Compile Include="Controllers\MerchantViewController.cs" />
@@ -128,9 +129,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201502281949402_InitialCreate.cs" />
-    <Compile Include="Migrations\201502281949402_InitialCreate.Designer.cs">
-      <DependentUpon>201502281949402_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201503030043182_ThisCreate.cs" />
+    <Compile Include="Migrations\201503030043182_ThisCreate.Designer.cs">
+      <DependentUpon>201503030043182_ThisCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Item.cs" />
@@ -151,6 +152,8 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\WorldMerchants.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -200,6 +203,11 @@
     <Content Include="Views\PlayersCrud\Details.cshtml" />
     <Content Include="Views\PlayersCrud\Edit.cshtml" />
     <Content Include="Views\PlayersCrud\Index.cshtml" />
+    <Content Include="Views\ItemBuy\Create.cshtml" />
+    <Content Include="Views\ItemBuy\Delete.cshtml" />
+    <Content Include="Views\ItemBuy\Details.cshtml" />
+    <Content Include="Views\ItemBuy\Edit.cshtml" />
+    <Content Include="Views\ItemBuy\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -212,8 +220,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502281949402_InitialCreate.resx">
-      <DependentUpon>201502281949402_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503030043182_ThisCreate.resx">
+      <DependentUpon>201503030043182_ThisCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

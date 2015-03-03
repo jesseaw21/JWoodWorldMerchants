@@ -7,7 +7,7 @@
 <h2>Current Items</h2>
 
 <p>
-    @Html.ActionLink("Create a New Item", "Create")
+    @Html.ActionLink("Create", "Create")
 </p>
 <table class="table">
     <tr>
@@ -63,16 +63,16 @@
             View Items by Mechant:
         </th>
         <th>
-            &nbsp;&nbsp;  @Html.ActionLink("Overwood", "Details/1", "MerchantsCrud")
+            &nbsp;&nbsp;  @Html.ActionLink("Overwood", "ItemsByMerchant/1", "ItemsCrud")
         </th>
         <th>
-            &nbsp;&nbsp; @Html.ActionLink("Underhill", "Details/2", "MerchantsCrud")
+            &nbsp;&nbsp; @Html.ActionLink("Underhill", "ItemsByMerchant/2", "ItemsCrud")
         </th>
         <th>
-            &nbsp;&nbsp;  @Html.ActionLink("The Mountain", "Details/3", "MerchantsCrud")
+            &nbsp;&nbsp;  @Html.ActionLink("The Mountain", "ItemsByMerchant/3", "ItemsCrud")
         </th>
         <th>
-            &nbsp;&nbsp;  @Html.ActionLink("Metalworks", "Details/4", "MerchantsCrud")
+            &nbsp;&nbsp;  @Html.ActionLink("Metalworks", "ItemsByMerchant/4", "ItemsCrud")
         </th>
     </tr>
 </table>

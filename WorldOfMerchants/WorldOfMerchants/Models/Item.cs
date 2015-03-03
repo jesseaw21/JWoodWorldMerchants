@@ -9,7 +9,6 @@ namespace WorldOfMerchants.Models
 {
     public class Item
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -22,7 +21,6 @@ namespace WorldOfMerchants.Models
         [StringLength(35)]
         public string Name { get; set; }
         public string Rarity { get; set; }
-        [Required]
         public string Type { get; set; }
         [Range(0, 100)]
         public int Value { get; set; }

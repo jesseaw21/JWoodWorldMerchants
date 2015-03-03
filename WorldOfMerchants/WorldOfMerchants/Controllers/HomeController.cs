@@ -10,7 +10,6 @@ namespace WorldOfMerchants.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "World Merchants is a site where you can buy things that aren't real";
             return View();
         }
 

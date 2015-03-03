@@ -40,6 +40,7 @@ namespace WorldMerchants.Controllers
         public ActionResult Create()
         {
             var rarities = new List<string> { "Common", "Uncommon", "Rare" };
+            var types = new List<string> { "Gemstone", "Wooden", "Metal", "Mineral", "Combination", "Other" };
 
             var merchants = new List<string>();
             var merchQuery = from m in db.Merchants
@@ -49,6 +50,7 @@ namespace WorldMerchants.Controllers
             merchants.AddRange(merchQuery);
 
             ViewBag.RarityList = new SelectList(rarities);
+            ViewBag.TypeList = new SelectList(types);
             ViewBag.MerchantList = new SelectList(merchants);
 
             return View();
@@ -59,7 +61,7 @@ namespace WorldMerchants.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Type,Value,Points")] ItemCreateViewModel itemCvm, string rareness, string aMerchant)
+        public ActionResult Create([Bind(Include = "Name,Value,Points")] ItemCreateViewModel itemCvm, string rareness, string aMerchant, string type)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +69,7 @@ namespace WorldMerchants.Controllers
                 {
                     Name = itemCvm.Name,
                     Rarity = rareness,
-                    Type = itemCvm.Type,
+                    Type = type,
                     Value = itemCvm.Value,
                     Points = itemCvm.Points,
                 };

@@ -9,7 +9,6 @@ namespace WorldOfMerchants.Models
 {
     public class Merchant
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
         [Display(Name = "Merchant Name")]
         public string Name { get; set; }

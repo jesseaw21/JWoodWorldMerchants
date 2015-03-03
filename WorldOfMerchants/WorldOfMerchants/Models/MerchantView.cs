@@ -8,8 +8,7 @@ namespace WorldOfMerchants.Models
 {
     public class MerchantView
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; } // This was for using something in ItemsByMerchant view
+        //public int ID { get; set; } // This was for using something in ItemsByMerchant view
 
         public string Name { get; set; }
         public string Location { get; set; }

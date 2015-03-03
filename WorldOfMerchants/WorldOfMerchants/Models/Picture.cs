@@ -8,7 +8,6 @@ namespace WorldOfMerchants.Models
 {
     public class Picture
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
         public string PictureURL { get; set; }
 
