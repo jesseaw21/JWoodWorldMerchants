@@ -90,6 +90,46 @@ namespace WorldOfMerchants.Controllers
             return View(item);
         }
 
+        //********************
+
+        // GET: ItemBuy/BuyItem/5
+        public ActionResult BuyItem(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Item item = db.Items.Find(id);
+            if (item == null)
+            {
+                return HttpNotFound();
+            }
+            return View(item);
+        }
+
+        // POST: BuyItem/BuyItem/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult BuyItem([Bind(Include = "ID,MerchantID,PlayerID,PictureID,Name,Rarity,Type,Value,Points")] Item item)
+        {
+            //WorldContext db = new WorldContext();
+            var thisItem = (from i in db.Items
+                            where i.ID == item.ID
+                            select i).FirstOrDefault();
+
+            thisItem.MerchantID = null;
+            thisItem.PlayerID = 1;
+
+            if (ModelState.IsValid)
+            {
+                db.Entry(thisItem).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(thisItem);
+        }
+        //********************
+
         // GET: ItemBuy/Delete/5
         public ActionResult Delete(int? id)
         {

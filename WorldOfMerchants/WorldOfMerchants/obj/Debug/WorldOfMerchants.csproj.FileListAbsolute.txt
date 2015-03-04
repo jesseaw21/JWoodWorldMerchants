@@ -94,3 +94,4 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerc
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.pdb
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.Migrations.ThisCreate.resources
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.csproj.GenerateResource.Cache
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.Migrations.ModelChanged.resources

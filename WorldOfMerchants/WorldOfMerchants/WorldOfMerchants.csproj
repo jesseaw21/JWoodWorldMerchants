@@ -133,6 +133,10 @@
     <Compile Include="Migrations\201503030043182_ThisCreate.Designer.cs">
       <DependentUpon>201503030043182_ThisCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503030128126_ModelChanged.cs" />
+    <Compile Include="Migrations\201503030128126_ModelChanged.Designer.cs">
+      <DependentUpon>201503030128126_ModelChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemCreateViewModel.cs" />
@@ -153,6 +157,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\WorldMerchants.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %286%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -208,6 +216,7 @@
     <Content Include="Views\ItemBuy\Details.cshtml" />
     <Content Include="Views\ItemBuy\Edit.cshtml" />
     <Content Include="Views\ItemBuy\Index.cshtml" />
+    <Content Include="Views\ItemBuy\BuyItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -222,6 +231,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503030043182_ThisCreate.resx">
       <DependentUpon>201503030043182_ThisCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503030128126_ModelChanged.resx">
+      <DependentUpon>201503030128126_ModelChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -56,7 +56,10 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerc
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.Razor.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\Antlr3.Runtime.pdb
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\Newtonsoft.Json.xml
-C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.InitialCreate.resources
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.csproj.GenerateResource.Cache
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.dll
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.pdb
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ThisCreate.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ModelChanged.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.NewCreate.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.csprojResolveAssemblyReference.cache

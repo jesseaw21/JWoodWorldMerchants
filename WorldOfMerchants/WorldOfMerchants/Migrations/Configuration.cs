@@ -46,9 +46,9 @@ namespace WorldOfMerchants.Migrations
 
             var players = new List<Player>
             {
-                new Player{ID=1,Name="Jones", DateStarted=DateTime.Now, Score=14},
-                new Player{ID=2,Name="Harold", DateStarted=DateTime.Now, Score=12},
-                new Player{ID=3,Name="Henry", DateStarted=DateTime.Now, Score=5}
+                new Player{ID=1,Name="Jones", DateStarted=DateTime.Now, Credits=40, Score=14},
+                new Player{ID=2,Name="Harold", DateStarted=DateTime.Now, Credits=100, Score=12},
+                new Player{ID=3,Name="Henry", DateStarted=DateTime.Now, Credits=20, Score=5}
             };
 
             players.ForEach(p => context.Players.AddOrUpdate(p));
