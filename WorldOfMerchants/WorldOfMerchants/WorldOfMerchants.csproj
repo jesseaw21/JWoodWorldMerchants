@@ -123,9 +123,15 @@
     <Compile Include="Controllers\MerchantsCrudController.cs" />
     <Compile Include="Controllers\MerchantViewController.cs" />
     <Compile Include="Controllers\PlayersCrudController.cs" />
+    <Compile Include="DAL\FakeUnitOfWork.cs" />
+    <Compile Include="DAL\FakeWorldRepository.cs" />
+    <Compile Include="DAL\IGenericRepo.cs" />
     <Compile Include="DAL\IPlayerRepository.cs" />
+    <Compile Include="DAL\IUnitOfWork.cs" />
     <Compile Include="DAL\PlayerRepository.cs" />
+    <Compile Include="DAL\UnitOfWork.cs" />
     <Compile Include="DAL\WorldContext.cs" />
+    <Compile Include="DAL\WorldRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
