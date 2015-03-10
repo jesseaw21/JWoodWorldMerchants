@@ -121,7 +121,6 @@
     <Compile Include="Controllers\ItemBuyController.cs" />
     <Compile Include="Controllers\ItemsCrudController.cs" />
     <Compile Include="Controllers\MerchantsCrudController.cs" />
-    <Compile Include="Controllers\MerchantViewController.cs" />
     <Compile Include="Controllers\PlayersCrudController.cs" />
     <Compile Include="DAL\FakeUnitOfWork.cs" />
     <Compile Include="DAL\FakeWorldRepository.cs" />
@@ -144,6 +143,7 @@
       <DependentUpon>201503030128126_ModelChanged.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemCreateViewModel.cs" />
     <Compile Include="Models\Merchant.cs" />
@@ -207,9 +207,6 @@
     <Content Include="Views\MerchantsCrud\Details.cshtml" />
     <Content Include="Views\MerchantsCrud\Edit.cshtml" />
     <Content Include="Views\MerchantsCrud\Index.cshtml" />
-    <Content Include="Views\MerchantView\Index.cshtml" />
-    <Content Include="Views\MerchantView\WorldItems.cshtml" />
-    <Content Include="Views\MerchantView\ItemsByMerchant.cshtml" />
     <Content Include="Views\MerchantsCrud\ItemsByMerchant.cshtml" />
     <Content Include="Views\ItemsCrud\ItemsByMerchant.cshtml" />
     <Content Include="Views\PlayersCrud\Create.cshtml" />

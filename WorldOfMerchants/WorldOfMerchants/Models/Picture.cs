@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WorldOfMerchants.Models
 {
-    public class Picture
+    public class Picture : IEntity
     {
         public int ID { get; set; }
         public string PictureURL { get; set; }

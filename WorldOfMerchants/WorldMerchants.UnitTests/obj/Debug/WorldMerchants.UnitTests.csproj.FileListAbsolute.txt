@@ -1,0 +1,13 @@
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\WorldMerchants.UnitTests.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\WorldMerchants.UnitTests.pdb
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\obj\Debug\WorldMerchants.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\obj\Debug\WorldMerchants.UnitTests.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\obj\Debug\WorldMerchants.UnitTests.pdb
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\WorldOfMerchants.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\EntityFramework.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\WorldOfMerchants.pdb
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\EntityFramework.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Optimization.xml

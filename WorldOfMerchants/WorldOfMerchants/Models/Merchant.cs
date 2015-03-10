@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WorldOfMerchants.Models
 {
-    public class Merchant
+    public class Merchant : IEntity
     {
         public int ID { get; set; }
         [Display(Name = "Merchant Name")]

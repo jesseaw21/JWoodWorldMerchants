@@ -1,0 +1,78 @@
+﻿@model IEnumerable<WorldOfMerchants.Models.Item>
+
+@{
+    ViewBag.Title = "Current Items";
+}
+
+<h2>Current Items</h2>
+
+<p>
+    @Html.ActionLink("Create", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rarity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Points)
+        </th>
+        <th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rarity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Points)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+
+<table>
+    <tr>
+        <th>
+            View Items by Mechant:
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("Overwood", "ItemsByMerchant/1", "ItemsCrud")
+        </th>
+        <th>
+            &nbsp;&nbsp; @Html.ActionLink("Underhill", "ItemsByMerchant/2", "ItemsCrud")
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("The Mountain", "ItemsByMerchant/3", "ItemsCrud")
+        </th>
+        <th>
+            &nbsp;&nbsp;  @Html.ActionLink("Metalworks", "ItemsByMerchant/4", "ItemsCrud")
+        </th>
+    </tr>
+</table>

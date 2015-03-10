@@ -13,12 +13,29 @@ namespace WorldOfMerchants.Controllers
 {
     public class MerchantsCrudController : Controller
     {
-        private WorldContext db = new WorldContext();
+        private IUnitOfWork unit;
+
+        public MerchantsCrudController()
+        {
+            unit = new UnitOfWork();
+        }
+
+        public MerchantsCrudController(FakeUnitOfWork f)
+        {
+            unit = f;
+        }
 
         // GET: MerchantsCrud
         public ActionResult Index()
         {
-            return View(db.Merchants.ToList());
+            var merchants = unit.MerchantRepo.Get();
+            var mList = new List<Merchant>();
+
+            foreach (Merchant m in merchants)
+            {
+                mList.Add(m);
+            }
+            return View(mList);
         }
 
         // GET: MerchantsCrud/Details/5
@@ -28,7 +45,7 @@ namespace WorldOfMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Merchant merchant = db.Merchants.Find(id);
+            Merchant merchant = unit.MerchantRepo.GetByID((int)id);
             if (merchant == null)
             {
                 return HttpNotFound();
@@ -51,8 +68,10 @@ namespace WorldOfMerchants.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Merchants.Add(merchant);
-                db.SaveChanges();
+                //db.Merchants.Add(merchant);
+                //db.SaveChanges();
+                unit.MerchantRepo.Insert(merchant);
+                unit.Save();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +85,9 @@ namespace WorldOfMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Merchant merchant = db.Merchants.Find(id);
+            //Merchant merchant = db.Merchants.Find(id);
+            Merchant merchant = unit.MerchantRepo.GetByID((int)id);
+
             if (merchant == null)
             {
                 return HttpNotFound();
@@ -83,8 +104,10 @@ namespace WorldOfMerchants.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(merchant).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(merchant).State = EntityState.Modified;
+                //db.SaveChanges();
+                unit.MerchantRepo.Update(merchant);
+                unit.Save();
                 return RedirectToAction("Index");
             }
             return View(merchant);
@@ -97,7 +120,8 @@ namespace WorldOfMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Merchant merchant = db.Merchants.Find(id);
+            //Merchant merchant = db.Merchants.Find(id);
+            Merchant merchant = unit.MerchantRepo.GetByID((int)id);
             if (merchant == null)
             {
                 return HttpNotFound();
@@ -110,9 +134,12 @@ namespace WorldOfMerchants.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Merchant merchant = db.Merchants.Find(id);
-            db.Merchants.Remove(merchant);
-            db.SaveChanges();
+            //Merchant merchant = db.Merchants.Find(id);
+            //db.Merchants.Remove(merchant);
+            //db.SaveChanges();
+            Merchant merchant = unit.MerchantRepo.GetByID(id);
+            unit.MerchantRepo.Delete(merchant);
+            unit.Save();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +147,7 @@ namespace WorldOfMerchants.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                unit.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -132,7 +159,8 @@ namespace WorldOfMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Merchant merchant = db.Merchants.Find(id);
+            //Merchant merchant = db.Merchants.Find(id);
+            Merchant merchant = unit.MerchantRepo.GetByID((int)id);
             if (merchant == null)
             {
                 return HttpNotFound();

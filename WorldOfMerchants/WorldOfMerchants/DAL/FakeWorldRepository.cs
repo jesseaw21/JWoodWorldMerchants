@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WorldMerchants.DAL;
+using WorldOfMerchants.Models;
 
 namespace WorldOfMerchants.DAL
 {
-    public class FakeWorldRepository<TEntity> : IGenericRepo<TEntity> where TEntity : //IEntityModel
-    {                                                              
+    public class FakeWorldRepository<TEntity> : IGenericRepo<TEntity> where TEntity : IEntity
+    {
         List<TEntity> entities;
 
         public FakeWorldRepository(List<TEntity> entitiesList)
@@ -40,28 +41,28 @@ namespace WorldOfMerchants.DAL
             }
         }
 
-        //public virtual TEntity GetByID(object id)
-        //{
-        //    //return (from e in entities
-        //    //        where e.ID == (int)id
-        //    //        select e).FirstOrDefault();
-        //    // Note: We constrined TEntity to be a subclass of IEntityModel
-        //    // just so that we could implement this method. If we hadn't made 
-        //    // TEntity a subclass of IEntityModel, then we could not have used
-        //    // e.ID in the where clause of our query.
-        //}
+        public virtual TEntity GetByID(object id)
+        {
+            return (from e in entities
+                    where e.ID == (int)id
+                    select e).FirstOrDefault();
+            // Note: We constrined TEntity to be a subclass of IEntityModel
+            // just so that we could implement this method. If we hadn't made 
+            // TEntity a subclass of IEntityModel, then we could not have used
+            // e.ID in the where clause of our query.
+        }
 
         public virtual void Insert(TEntity entity)
         {
             entities.Add(entity);
         }
 
-        //public virtual void Delete(object id)
-        //{
+        public virtual void Delete(object id)
+        {
 
-        //    TEntity entityToDelete = GetByID(id);
-        //    Delete(entityToDelete);
-        //}
+            TEntity entityToDelete = GetByID(id);
+            Delete(entityToDelete);
+        }
 
         public virtual void Delete(TEntity entityToDelete)
         {

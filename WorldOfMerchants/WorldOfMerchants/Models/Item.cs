@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WorldOfMerchants.Models
 {
-    public class Item
+    public class Item : IEntity
     {
         public int ID { get; set; }
 
