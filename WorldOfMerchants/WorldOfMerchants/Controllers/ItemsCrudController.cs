@@ -13,12 +13,22 @@ namespace WorldMerchants.Controllers
 {
     public class ItemsCrudController : Controller
     {
-        private WorldContext db = new WorldContext();
+        private IUnitOfWork unit;
+
+        public ItemsCrudController()
+        {
+            unit = new UnitOfWork();
+        }
+
+        public ItemsCrudController(FakeUnitOfWork f)
+        {
+            unit = f;
+        }
 
         // GET: ItemsCrud
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(unit.ItemRepo.Get().ToList());
         }
 
         // GET: ItemsCrud/Details/5
@@ -28,7 +38,7 @@ namespace WorldMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            Item item = unit.ItemRepo.GetByID(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -43,11 +53,12 @@ namespace WorldMerchants.Controllers
             var types = new List<string> { "Gemstone", "Wooden", "Metal", "Mineral", "Combination", "Other" };
 
             var merchants = new List<string>();
-            var merchQuery = from m in db.Merchants
-                             orderby m.Name
-                             select m.Name;
 
-            merchants.AddRange(merchQuery);
+            var merchs = unit.MerchantRepo.Get();
+            foreach (Merchant m in merchs)
+            {
+                merchants.Add(m.Name);
+            }
 
             ViewBag.RarityList = new SelectList(rarities);
             ViewBag.TypeList = new SelectList(types);
@@ -56,9 +67,7 @@ namespace WorldMerchants.Controllers
             return View();
         }
 
-        // POST: ItemsCrud/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: ItemsCrud/Create***************
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Name,Value,Points")] ItemCreateViewModel itemCvm, string rareness, string aMerchant, string type)
@@ -73,13 +82,13 @@ namespace WorldMerchants.Controllers
                     Value = itemCvm.Value,
                     Points = itemCvm.Points,
                 };
-                var merchant = (from m in db.Merchants
+                var merchant = (from m in unit.MerchantRepo.Get()
                                 where m.Name == aMerchant
                                 select m).FirstOrDefault<Merchant>();
                 item.MerchantID = merchant.ID;
 
-                db.Items.Add(item);
-                db.SaveChanges();
+                unit.ItemRepo.Insert(item);
+                unit.Save();
                 return RedirectToAction("Index");
             }
 
@@ -93,7 +102,7 @@ namespace WorldMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            Item item = unit.ItemRepo.GetByID(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -110,8 +119,8 @@ namespace WorldMerchants.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(item).State = EntityState.Modified;
-                db.SaveChanges();
+                unit.ItemRepo.Update(item);
+                unit.Save();
                 return RedirectToAction("Index");
             }
             return View(item);
@@ -124,7 +133,7 @@ namespace WorldMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            Item item = unit.ItemRepo.GetByID(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -137,9 +146,9 @@ namespace WorldMerchants.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
-            db.SaveChanges();
+            Item item = unit.ItemRepo.GetByID(id);
+            unit.ItemRepo.Delete(item);
+            unit.Save();
             return RedirectToAction("Index");
         }
 
@@ -147,7 +156,7 @@ namespace WorldMerchants.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                unit.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -159,7 +168,7 @@ namespace WorldMerchants.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Merchant merchant = db.Merchants.Find(id);
+            Merchant merchant = unit.MerchantRepo.GetByID(id);
             if (merchant == null)
             {
                 return HttpNotFound();

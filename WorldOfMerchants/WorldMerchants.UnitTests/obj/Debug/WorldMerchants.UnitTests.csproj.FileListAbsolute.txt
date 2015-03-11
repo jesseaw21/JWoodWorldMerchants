@@ -11,3 +11,15 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMercha
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Mvc.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\EntityFramework.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\WorldMerchants.UnitTests.dll.config
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Razor.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.Razor.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldMerchants.UnitTests\bin\Debug\System.Web.WebPages.Razor.xml
