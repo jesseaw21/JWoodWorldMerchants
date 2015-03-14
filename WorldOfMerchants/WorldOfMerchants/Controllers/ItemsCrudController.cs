@@ -95,37 +95,6 @@ namespace WorldMerchants.Controllers
             return View(itemCvm);
         }
 
-        // GET: ItemsCrud/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Item item = unit.ItemRepo.GetByID(id);
-            if (item == null)
-            {
-                return HttpNotFound();
-            }
-            return View(item);
-        }
-
-        // POST: ItemsCrud/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,MerchantID,PlayerID,PictureID,Name,Rarity,Type,Value,Points,Magic")] Item item)
-        {
-            if (ModelState.IsValid)
-            {
-                unit.ItemRepo.Update(item);
-                unit.Save();
-                return RedirectToAction("Index");
-            }
-            return View(item);
-        }
-
         // GET: ItemsCrud/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -179,5 +148,34 @@ namespace WorldMerchants.Controllers
             ViewBag.ItemCount = itemCount;
             return View(merchant);
         }
+
+        //// GET: ItemsCrud/Edit/5
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Item item = unit.ItemRepo.GetByID(id);
+        //    if (item == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(item);
+        //}
+
+        //// POST: ItemsCrud/Edit/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit([Bind(Include = "ID,MerchantID,PlayerID,PictureID,Name,Rarity,Type,Value,Points,Magic")] Item item)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        unit.ItemRepo.Update(item);
+        //        unit.Save();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(item);
+        //}
     }
 }

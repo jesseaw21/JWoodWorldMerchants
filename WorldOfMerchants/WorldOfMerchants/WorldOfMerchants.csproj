@@ -142,6 +142,10 @@
     <Compile Include="Migrations\201503030128126_ModelChanged.Designer.cs">
       <DependentUpon>201503030128126_ModelChanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503141755563_PlayerUpdate.cs" />
+    <Compile Include="Migrations\201503141755563_PlayerUpdate.Designer.cs">
+      <DependentUpon>201503141755563_PlayerUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\Item.cs" />
@@ -222,6 +226,7 @@
     <Content Include="Views\ItemBuy\BuyItem.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\MerchantsCrud\WorldItems.cshtml" />
+    <Content Include="Views\ItemBuy\MyItems.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503030128126_ModelChanged.resx">
       <DependentUpon>201503030128126_ModelChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503141755563_PlayerUpdate.resx">
+      <DependentUpon>201503141755563_PlayerUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

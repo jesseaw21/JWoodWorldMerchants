@@ -49,12 +49,14 @@ namespace WorldOfMerchants.Controllers
         }
 
         // POST: PlayersCrud/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,DateStarted,Score")] Player player)
+        public ActionResult Create([Bind(Include = "ID,Name,Email,DateStarted,Credits,Score")] Player player)
         {
+            player.DateStarted = DateTime.Now;
+            player.Credits = 0;
+            player.Score = 0;
+
             if (ModelState.IsValid)
             {
                 pr.InsertPlayer(player);
@@ -63,38 +65,7 @@ namespace WorldOfMerchants.Controllers
             }
 
             return View(player);
-        }
-
-        // GET: PlayersCrud/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Player player = pr.GetPlayerByID((int)id);
-            if (player == null)
-            {
-                return HttpNotFound();
-            }
-            return View(player);
-        }
-
-        // POST: PlayersCrud/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,DateStarted,Score")] Player player)
-        {
-            if (ModelState.IsValid)
-            {
-                pr.UpdatePlayer(player);
-                pr.Save();
-                return RedirectToAction("Index");
-            }
-            return View(player);
-        }
+        }        
 
         // GET: PlayersCrud/Delete/5
         public ActionResult Delete(int? id)
@@ -130,5 +101,36 @@ namespace WorldOfMerchants.Controllers
             }
             base.Dispose(disposing);
         }
+
+        //// GET: PlayersCrud/Edit/5
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Player player = pr.GetPlayerByID((int)id);
+        //    if (player == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(player);
+        //}
+
+        //// POST: PlayersCrud/Edit/5
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit([Bind(Include = "ID,Name,DateStarted,Score")] Player player)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        pr.UpdatePlayer(player);
+        //        pr.Save();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(player);
+        //}
     }
 }

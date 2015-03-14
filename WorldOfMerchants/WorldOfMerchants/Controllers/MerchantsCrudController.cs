@@ -36,7 +36,54 @@ namespace WorldOfMerchants.Controllers
                 mList.Add(m);
             }
             return View(mList);
+        }        
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                unit.Dispose();
+            }
+            base.Dispose(disposing);
         }
+
+        // GET: MerchantsCrud/ItemsByMerchant/5
+        public ActionResult ItemsByMerchant(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            //Merchant merchant = db.Merchants.Find(id);
+            Merchant merchant = unit.MerchantRepo.GetByID((int)id);
+            if (merchant == null)
+            {
+                return HttpNotFound();
+            }
+
+            int itemCount = merchant.Items.Count;
+
+            ViewBag.ItemCount = itemCount;
+            return View(merchant);
+        }
+
+        public ActionResult WorldItems()
+        {
+            WorldContext db = new WorldContext();
+
+            var items = db.Items;
+            int numItems = 0;
+            foreach (Item i in items)
+                numItems++;
+
+            ViewBag.NumItems = numItems;
+            ViewBag.Header = "Items in the World";
+
+            return View(items);
+        }
+
+
+        //***** Should Not need any of these methods but I'm keeping them around just in case ******//
 
         //// GET: MerchantsCrud/Details/5
         //public ActionResult Details(int? id)
@@ -142,49 +189,5 @@ namespace WorldOfMerchants.Controllers
         //    unit.Save();
         //    return RedirectToAction("Index");
         //}
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                unit.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        // GET: MerchantsCrud/ItemsByMerchant/5
-        public ActionResult ItemsByMerchant(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            //Merchant merchant = db.Merchants.Find(id);
-            Merchant merchant = unit.MerchantRepo.GetByID((int)id);
-            if (merchant == null)
-            {
-                return HttpNotFound();
-            }
-
-            int itemCount = merchant.Items.Count;
-
-            ViewBag.ItemCount = itemCount;
-            return View(merchant);
-        }
-
-        public ActionResult WorldItems()
-        {
-            WorldContext db = new WorldContext();
-
-            var items = db.Items;
-            int numItems = 0;
-            foreach (Item i in items)
-                numItems++;
-
-            ViewBag.NumItems = numItems;
-            ViewBag.Header = "Items in the World";
-
-            return View(items);
-        }
     }
 }
