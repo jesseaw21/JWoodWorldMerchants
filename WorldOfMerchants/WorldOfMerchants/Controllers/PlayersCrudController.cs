@@ -54,7 +54,7 @@ namespace WorldOfMerchants.Controllers
         public ActionResult Create([Bind(Include = "ID,Name,Email,DateStarted,Credits,Score")] Player player)
         {
             player.DateStarted = DateTime.Now;
-            player.Credits = 0;
+            player.Credits = 100;
             player.Score = 0;
 
             if (ModelState.IsValid)

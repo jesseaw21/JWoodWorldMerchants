@@ -28,7 +28,11 @@ namespace WorldMerchants.Controllers
         // GET: ItemsCrud
         public ActionResult Index()
         {
-            return View(unit.ItemRepo.Get().ToList());
+            var items = (from i in unit.ItemRepo.Get()
+                         where i.MerchantID != null
+                         select i).ToList();
+
+            return View(items);
         }
 
         // GET: ItemsCrud/Details/5

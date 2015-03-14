@@ -12,7 +12,11 @@ namespace WorldOfMerchants.Controllers
         {
             if (Session["LOGIN"] != null)
             {
-                ViewBag.LoginName = (string)Session["LOGIN"];
+                ViewBag.Message = "You are currently logged in as " + (string)Session["LOGIN"] + ". Check out the merchants and items available.";
+            }
+            else
+            {
+                ViewBag.Message = "Create an account and log in so that you can get started on your journey of items hoarding.";
             }
 
             return View();

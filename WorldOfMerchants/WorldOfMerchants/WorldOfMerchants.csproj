@@ -227,6 +227,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\MerchantsCrud\WorldItems.cshtml" />
     <Content Include="Views\ItemBuy\MyItems.cshtml" />
+    <Content Include="Views\ItemBuy\NotLoggedIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

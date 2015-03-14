@@ -18,7 +18,11 @@ namespace WorldOfMerchants.Controllers
         // GET: ItemBuy
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            var items = (from i in db.Items
+                         where i.MerchantID != null
+                         select i).ToList();
+
+            return View(items);
         }
 
         //********************
@@ -26,16 +30,23 @@ namespace WorldOfMerchants.Controllers
         // GET: ItemBuy/BuyItem/5
         public ActionResult BuyItem(int? id)
         {
-            if (id == null)
+            if (Session["LOGIN"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Item item = db.Items.Find(id);
+                if (item == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(item); 
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
+            else
             {
-                return HttpNotFound();
+                return Redirect("NotLoggedIn");
             }
-            return View(item);
         }
 
         // POST: BuyItem/BuyItem/5
@@ -43,26 +54,35 @@ namespace WorldOfMerchants.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult BuyItem([Bind(Include = "ID,MerchantID,PlayerID,PictureID,Name,Rarity,Type,Value,Points")] Item item)
         {
-            var thisItem = (from i in db.Items
-                            where i.ID == item.ID
-                            select i).FirstOrDefault();
-
-            thisItem.MerchantID = null;
-            thisItem.PlayerID = 4;
-
-            //var player = (from p in db.Players
-            //              where p.ID == item.PlayerID
-            //              select p).FirstOrDefault();
-            //player.Credits -= thisItem.Value;
-
-            if (ModelState.IsValid)
+            if (Session["LOGIN"] != null)
             {
-                db.Entry(thisItem);
-                //db.Entry(player);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                string login = (string)Session["LOGIN"];
+
+                var thisItem = (from i in db.Items
+                                where i.ID == item.ID
+                                select i).FirstOrDefault();
+
+                var player = (from p in db.Players
+                              where p.Email == login
+                              select p).FirstOrDefault();
+
+                thisItem.MerchantID = null;
+                thisItem.PlayerID = player.ID;
+                player.Credits -= thisItem.Value;
+
+                if (ModelState.IsValid)
+                {
+                    db.Entry(thisItem);
+                    db.Entry(player);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(item); 
             }
-            return View(item);
+            else
+            {
+                return Redirect("NotLoggedIn");
+            }
         }
 
         public ActionResult MyItems()
@@ -83,8 +103,13 @@ namespace WorldOfMerchants.Controllers
             }
             else
             {
-                ViewBag.LoginStatus = "You must log in before you can view your items";
+                return Redirect("NotLoggedIn");
             }
+        }
+
+        public ActionResult NotLoggedIn()
+        {
+            ViewBag.LoginStatus = "You must be logged in to complete this action!";
 
             return View();
         }
