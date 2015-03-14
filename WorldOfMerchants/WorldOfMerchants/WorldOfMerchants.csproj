@@ -220,6 +220,8 @@
     <Content Include="Views\ItemBuy\Edit.cshtml" />
     <Content Include="Views\ItemBuy\Index.cshtml" />
     <Content Include="Views\ItemBuy\BuyItem.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\MerchantsCrud\WorldItems.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -112,7 +112,6 @@ namespace WorldOfMerchants.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult BuyItem([Bind(Include = "ID,MerchantID,PlayerID,PictureID,Name,Rarity,Type,Value,Points")] Item item)
         {
-            //WorldContext db = new WorldContext();
             var thisItem = (from i in db.Items
                             where i.ID == item.ID
                             select i).FirstOrDefault();
@@ -120,13 +119,19 @@ namespace WorldOfMerchants.Controllers
             thisItem.MerchantID = null;
             thisItem.PlayerID = 1;
 
+            var player = (from p in db.Players
+                          where p.ID == item.PlayerID
+                          select p).FirstOrDefault();
+            player.Credits -= thisItem.Value;
+
             if (ModelState.IsValid)
             {
-                db.Entry(thisItem).State = EntityState.Modified;
+                db.Entry(thisItem);
+                db.Entry(player);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(thisItem);
+            return View(item);
         }
         //********************
 

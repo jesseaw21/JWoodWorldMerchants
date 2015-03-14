@@ -10,6 +10,11 @@ namespace WorldOfMerchants.Controllers
     {
         public ActionResult Index()
         {
+            if (Session["LOGIN"] != null)
+            {
+                ViewBag.LoginName = (string)Session["LOGIN"];
+            }
+
             return View();
         }
 
@@ -25,6 +30,19 @@ namespace WorldOfMerchants.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string loginName)
+        {
+            Session["LOGIN"] = loginName;
+
+            return RedirectToAction("Index");
         }
     }
 }
