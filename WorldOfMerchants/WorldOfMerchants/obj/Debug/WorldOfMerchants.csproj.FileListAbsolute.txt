@@ -32,3 +32,4 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerc
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.pdb
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.csprojResolveAssemblyReference.cache
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.Migrations.PlayerUpdate.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Debug\WorldOfMerchants.Migrations.ItemChange.resources

@@ -26,5 +26,6 @@ namespace WorldOfMerchants.Models
         public int Value { get; set; }
         [Range(0, 20)]
         public int Points { get; set; }
+        public string PicUrl { get; set; }
     }
 }

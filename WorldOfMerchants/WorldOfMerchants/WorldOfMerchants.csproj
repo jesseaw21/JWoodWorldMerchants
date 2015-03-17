@@ -146,6 +146,10 @@
     <Compile Include="Migrations\201503141755563_PlayerUpdate.Designer.cs">
       <DependentUpon>201503141755563_PlayerUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503170152489_ItemChange.cs" />
+    <Compile Include="Migrations\201503170152489_ItemChange.Designer.cs">
+      <DependentUpon>201503170152489_ItemChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\Item.cs" />
@@ -171,6 +175,9 @@
     <None Include="Properties\PublishProfiles\WorldOfMerchants %284%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %285%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %287%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %288%29.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %289%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -228,9 +235,11 @@
     <Content Include="Views\MerchantsCrud\WorldItems.cshtml" />
     <Content Include="Views\ItemBuy\MyItems.cshtml" />
     <Content Include="Views\ItemBuy\NotLoggedIn.cshtml" />
+    <Content Include="Views\ItemBuy\SellItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -248,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503141755563_PlayerUpdate.resx">
       <DependentUpon>201503141755563_PlayerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503170152489_ItemChange.resx">
+      <DependentUpon>201503170152489_ItemChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

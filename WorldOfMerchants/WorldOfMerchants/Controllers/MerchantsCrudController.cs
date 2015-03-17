@@ -100,30 +100,30 @@ namespace WorldOfMerchants.Controllers
         //    return View(merchant);
         //}
 
-        //// GET: MerchantsCrud/Create
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
+        // GET: MerchantsCrud/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
 
-        //// POST: MerchantsCrud/Create
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "ID,Name,Location,Type")] Merchant merchant)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        //db.Merchants.Add(merchant);
-        //        //db.SaveChanges();
-        //        unit.MerchantRepo.Insert(merchant);
-        //        unit.Save();
-        //        return RedirectToAction("Index");
-        //    }
+        // POST: MerchantsCrud/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,Name,Location,Type")] Merchant merchant)
+        {
+            if (ModelState.IsValid)
+            {
+                //db.Merchants.Add(merchant);
+                //db.SaveChanges();
+                unit.MerchantRepo.Insert(merchant);
+                unit.Save();
+                return RedirectToAction("Index");
+            }
 
-        //    return View(merchant);
-        //}
+            return View(merchant);
+        }
 
         //// GET: MerchantsCrud/Edit/5
         //public ActionResult Edit(int? id)

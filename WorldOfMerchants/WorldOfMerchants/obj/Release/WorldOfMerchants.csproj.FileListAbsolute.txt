@@ -1,34 +1,3 @@
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\WorldOfMerchants.dll.config
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\WorldOfMerchants.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\WorldOfMerchants.pdb
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\Antlr3.Runtime.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\EntityFramework.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\EntityFramework.SqlServer.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\Newtonsoft.Json.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Helpers.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Mvc.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Optimization.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Razor.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.Razor.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\WebGrease.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\EntityFramework.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\EntityFramework.SqlServer.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Helpers.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Mvc.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Optimization.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Razor.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.Razor.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\Antlr3.Runtime.pdb
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\bin\Newtonsoft.Json.xml
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.InitialCreate.resources
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.csproj.GenerateResource.Cache
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.dll
-C:\Users\Jesse\Documents\Visual Studio 2013\Projects\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.pdb
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\WorldOfMerchants.dll.config
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\WorldOfMerchants.dll
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\WorldOfMerchants.pdb
@@ -47,8 +16,8 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerc
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\WebGrease.dll
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\EntityFramework.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\EntityFramework.SqlServer.xml
-C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Helpers.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Mvc.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Helpers.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Optimization.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.Razor.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.xml
@@ -56,10 +25,10 @@ C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerc
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\System.Web.WebPages.Razor.xml
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\Antlr3.Runtime.pdb
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\bin\Newtonsoft.Json.xml
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ThisCreate.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ModelChanged.resources
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.PlayerUpdate.resources
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.csproj.GenerateResource.Cache
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.dll
 C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.pdb
-C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ThisCreate.resources
-C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ModelChanged.resources
-C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.NewCreate.resources
-C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.csprojResolveAssemblyReference.cache
+C:\Users\Jesse\Documents\GitHub\JWoodWorldMerchants\WorldOfMerchants\WorldOfMerchants\obj\Release\WorldOfMerchants.Migrations.ItemChange.resources

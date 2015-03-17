@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WorldOfMerchants.Models.Item>
 
 @{
-    ViewBag.Title = "Current Items";
+    ViewBag.Title = "Current Merchant Items";
 }
 
 <h2>Current Items</h2>
@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create", "Create")
 </p>
-<table class="table">
+<table class="table table-striped table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -26,8 +26,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Points)
         </th>
-        <th>
-        <th></th>
     </tr>
 
     @foreach (var item in Model)
@@ -48,11 +46,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Points)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
+            @*<td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>*@
         </tr>
     }
 </table>

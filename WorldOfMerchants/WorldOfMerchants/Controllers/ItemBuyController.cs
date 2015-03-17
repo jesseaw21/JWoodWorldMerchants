@@ -21,7 +21,7 @@ namespace WorldOfMerchants.Controllers
             var items = (from i in db.Items
                          where i.MerchantID != null
                          select i).ToList();
-
+            
             return View(items);
         }
 
@@ -69,13 +69,14 @@ namespace WorldOfMerchants.Controllers
                 thisItem.MerchantID = null;
                 thisItem.PlayerID = player.ID;
                 player.Credits -= thisItem.Value;
+                player.Score += thisItem.Points;
 
                 if (ModelState.IsValid)
                 {
                     db.Entry(thisItem);
                     db.Entry(player);
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("MyItems");
                 }
                 return View(item); 
             }
@@ -83,6 +84,72 @@ namespace WorldOfMerchants.Controllers
             {
                 return Redirect("NotLoggedIn");
             }
+        }
+
+        // GET: ItemBuy/SellItem/5
+        public ActionResult SellItem(int? id)
+        {
+            var merchants = new List<string>();
+            var merchs = db.Merchants;
+
+            foreach (Merchant m in merchs)
+            {
+                merchants.Add(m.Name);
+            }
+
+            ViewBag.MerchantList = new SelectList(merchants);
+
+            if (Session["LOGIN"] != null)
+            {
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Item item = db.Items.Find(id);
+                if (item == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(item);
+            }
+            else
+            {
+                return Redirect("NotLoggedIn");
+            }
+        }
+
+        // POST: BuyItem/SellItem/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SellItem([Bind(Include = "ID,MerchantID,PlayerID,PictureID,Name,Rarity,Type,Value,Points")] Item item, string aMerchant)
+        {
+                string login = (string)Session["LOGIN"];
+
+                var thisItem = (from i in db.Items
+                                where i.ID == item.ID
+                                select i).FirstOrDefault();
+
+                var player = (from p in db.Players
+                              where p.Email == login
+                              select p).FirstOrDefault();
+
+                var merchant = (from m in db.Merchants
+                                where m.Name == aMerchant
+                                select m).FirstOrDefault();
+
+                thisItem.MerchantID = merchant.ID;
+                thisItem.PlayerID = null;
+                player.Credits += thisItem.Value;
+                player.Score -= thisItem.Points;
+
+                if (ModelState.IsValid)
+                {
+                    db.Entry(thisItem);
+                    db.Entry(player);
+                    db.SaveChanges();
+                    return RedirectToAction("MyItems");
+                }
+                return View(item);
         }
 
         public ActionResult MyItems()
@@ -98,6 +165,11 @@ namespace WorldOfMerchants.Controllers
                 var items = (from i in db.Items
                              where i.PlayerID == player.ID
                              select i).ToList();
+
+                int credits = player.Credits;
+                int score = player.Score;
+                ViewBag.Credits = credits;
+                ViewBag.Score = score;
 
                 return View(items);                
             }

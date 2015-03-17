@@ -12,7 +12,10 @@ namespace WorldOfMerchants.Controllers
         {
             if (Session["LOGIN"] != null)
             {
-                ViewBag.Message = "You are currently logged in as " + (string)Session["LOGIN"] + ". Check out the merchants and items available.";
+                //ViewBag.Message = "You are currently logged in as " + (string)Session["LOGIN"] + ". Check out the merchants and items available.";
+                ViewBag.Message = "You are currently logged in as ";
+                ViewBag.Message2 = (string)Session["LOGIN"];
+                ViewBag.Message3 = ". Check out the merchants and items available.";
             }
             else
             {

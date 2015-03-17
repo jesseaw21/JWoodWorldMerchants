@@ -1,0 +1,43 @@
+﻿@model WorldOfMerchants.Models.Item
+
+@{
+    ViewBag.Title = "Sell Item";
+}
+
+<h2>Sell Item</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        What Merchant would you like to sell this item to?<br />
+
+            <div class="col-md-10">
+                @Html.DropDownList("aMerchant", (IEnumerable<SelectListItem>)ViewBag.MerchantList, "Select Merchant")
+            </div>
+        <br />
+        <br />
+        You will recieve @Html.DisplayFor(model => model.Value) credits for this item.
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Sell Item" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
