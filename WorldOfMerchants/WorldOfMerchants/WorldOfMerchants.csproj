@@ -170,6 +170,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\WorldMerchants.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldOfMerchants %2810%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %284%29.pubxml" />

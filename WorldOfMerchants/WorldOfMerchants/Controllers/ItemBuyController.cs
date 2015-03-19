@@ -16,11 +16,17 @@ namespace WorldOfMerchants.Controllers
         private WorldContext db = new WorldContext();
 
         // GET: ItemBuy
-        public ActionResult Index()
-        {
+        public ActionResult Index(string searchString)
+        {        
             var items = (from i in db.Items
                          where i.MerchantID != null
-                         select i).ToList();
+                         select i);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(i => i.Name.Contains(searchString) 
+                            || i.Type.Contains(searchString));
+            }
             
             return View(items);
         }
@@ -30,8 +36,6 @@ namespace WorldOfMerchants.Controllers
         // GET: ItemBuy/BuyItem/5
         public ActionResult BuyItem(int? id)
         {
-            if (Session["LOGIN"] != null)
-            {
                 if (id == null)
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -42,11 +46,7 @@ namespace WorldOfMerchants.Controllers
                     return HttpNotFound();
                 }
                 return View(item); 
-            }
-            else
-            {
-                return Redirect("NotLoggedIn");
-            }
+            
         }
 
         // POST: BuyItem/BuyItem/5

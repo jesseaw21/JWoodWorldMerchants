@@ -6,6 +6,13 @@
 
 <h2>Items For Sale</h2>
 
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name or type: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table table-striped table-hover">
     <tr>
         <th>
@@ -22,9 +29,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Points)
-        </th>
-        <th>
-            Picture
         </th>
         <th>
             Buy
@@ -49,11 +53,14 @@
             @Html.DisplayFor(modelItem => item.Points)
         </td>
         <td>
-            <img src="~/Images/@item.PicUrl" height="100" width="100" />
+            <a href="@Url.Action("BuyItem", "ItemBuy", new { id=item.ID })">
+                <img src="~/Images/@item.PicUrl" height="100" width="100" />
+            </a>
         </td>
-        <td>
-            @Html.ActionLink("Buy", "BuyItem", new { id=item.ID })
-        </td>
+        @*<td>
+        @Html.ActionLink("Buy", "BuyItem", new { id=item.ID })
+    </td>
+        *@
     </tr>
 }
 
