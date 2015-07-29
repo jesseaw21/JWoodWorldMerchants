@@ -169,6 +169,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\worldmerchants %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\worldmerchants %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\worldmerchants %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\worldmerchants %285%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldMerchants.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %2810%29.pubxml" />
     <None Include="Properties\PublishProfiles\WorldOfMerchants %282%29.pubxml" />
